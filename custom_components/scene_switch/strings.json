@@ -1,0 +1,40 @@
+{
+    "title": "Link a scene to a switch",
+    "config": {
+      "step": {
+        "user": {
+          "description": "Pick a scene that will be linked to this switch. The switch will track whether the devices in the scene match the scene state.",
+          "data": {
+            "entity_id": "Scene",
+            "include_lights": "Track state of lights",
+            "include_covers": "Track state of covers",
+            "include_switches": "Track state of switches"
+          },
+          "data_description": {
+            "include_lights": "Set scene switch according to the state of lights in the scene",
+            "include_covers": "Set scene switch according to the state of covers in the scene",
+            "include_switches": "Set scene switch according to the state of switches in the scene"
+          }
+        }
+      }
+    },
+    "options": {
+      "step": {
+        "init": {
+          "description": "Configure the scene switch tracking.",
+          "data": {
+            "entity_id": "[%key:component::scene_switch::config::step::user::data::entity_id%]",
+            "include_lights": "[%key:component::scene_switch::config::step::user::data::include_lights%]",
+            "include_covers": "[%key:component::scene_switch::config::step::user::data::include_covers%]",
+            "include_switches": "[%key:component::scene_switch::config::step::user::data::include_switches%]"
+          },
+          "data_description": {
+            "include_lights": "[%key:component::scene_switch::config::step::user::data_description::include_lights%]",
+            "include_covers": "[%key:component::scene_switch::config::step::user::data_description::include_covers%]",
+            "include_switches": "[%key:component::scene_switch::config::step::user::data_description::include_switches%]"
+          }
+        }
+      }
+    }
+  }
+  

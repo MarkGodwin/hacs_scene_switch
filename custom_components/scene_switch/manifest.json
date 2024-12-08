@@ -1,0 +1,13 @@
+{
+    "domain": "scene_switch",
+    "integration_type": "helper",
+    "name": "Scene Switch",
+    "codeowners": ["@markgodwin"],
+    "config_flow": true,
+    "dependencies": ["scene"],
+    "documentation": "https://github.com/MarkGodwin/hacs_scene_switch",
+    "iot_class": "calculated",
+    "quality_scale": "bronze",
+    "version": "1.0.0"
+  }
+  
